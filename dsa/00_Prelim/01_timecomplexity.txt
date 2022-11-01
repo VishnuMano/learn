@@ -1,0 +1,35 @@
+Time Complexity and Big O Notation Gives Rough Idea of How a Function Scales as Input Increases
+
+Conversion Table
+Time Complexity  |     Big O Notation
+linear time      |     O(n)
+constant time    |     O(1)
+quadratic time   |     O(n^2)
+
+Conversion Time Complexity to Big O (2 Steps)
+1. Find Fastest Growing Term
+2. Remove Coefficient
+
+Examples
+let time complexity of a function be: T = an + b (where n represents number of elements)
+Fastest Growing Term: an
+Divide Coefficient=> left with n
+Therefore, the Big O notation is O(n)
+________________________________________________________
+
+let time complexity of a function be T = cn^2 + dn + e
+Fastest Growing Term: cn^2
+Divide Coefficient=> left with n^2
+Therefore, the Big O notation is O(n^2)
+________________________________________________________
+
+Python Implementation of a Example Function
+def example(given_array):
+	total = 0
+	return total
+
+time complexity: T = c
+Fastest Growing Term: c
+Divide Coefficient=> left with 1
+Therefore, the Big O notaiton is O(1)
+________________________________________________________
