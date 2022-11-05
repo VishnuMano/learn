@@ -1,6 +1,9 @@
 import cv2
 
 img = cv2.imread('assets/img2.jpeg', 0)
+# -1 = Original
+#  0 = Grayscale
+#  1 = Transparent
 img = cv2.resize(img, (0, 0), fx=2, fy=2)
 img = cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE)
 cv2.imwrite('new_img.jpg', img)
