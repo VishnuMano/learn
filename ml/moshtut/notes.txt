@@ -1,0 +1,17 @@
+ML Steps
+1. Import data
+2. Clean data
+3. Split data into training/test sets
+4. Create a model (algorithms like decision trees or neural nets) - no need to write algorithms from scratch b/c tools like scikit learn can be used
+5. Train model
+6. Make predictions
+7. Evaluate and Improve
+
+Libraries for ML
+1. Numpy - provides a multidimensional array
+2. Pandas - data analysis library that provides dataframe (2d data structure that is like spreadsheet w/ rows and columns)
+3. MatPlotLib - 2d graphing library
+4. Scikit-Learn - provides common algorithms like decision trees and neural networks
+
+Anaconda Distribution
+- Installs all data science libraries, python, and jupyter notebooks
