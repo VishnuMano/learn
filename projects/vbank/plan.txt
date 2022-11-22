@@ -1,0 +1,8 @@
+Rules:
+All money is stored within a wallet
+
+Every user has a personal wallet
+Every corporation has a corp wallet
+Every bank has a bank wallet
+
+Each wallet can be split into sections

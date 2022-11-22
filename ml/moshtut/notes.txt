@@ -15,3 +15,7 @@ Libraries for ML
 
 Anaconda Distribution
 - Installs all data science libraries, python, and jupyter notebooks
+
+ML Steps In Detail
+1. Import data (use pandas read_csv)
+2. Clean data (split into input dataset and output dataset)
