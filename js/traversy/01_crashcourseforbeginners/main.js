@@ -161,10 +161,76 @@
 // }
 
 // console.log(addNums(4, 5));
+// // Arrow Function
+// const addNums = (num1 = 1, num2 = 2) => {
+//     return num1 + num2;
+// }
+// console.log(addNums(1, 2));
 
-// Arrow Function
-const addNums = (num1 = 1, num2 = 2) => {
-    return num1 + num2;
-}
-console.log(addNums(1, 2));
+// // OOP
+// // Constructior Function
+// function Person(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);
+//     this.getBirthYear = function() {
+//         return this.dob.getFullYear();
+//     }
+//     this.getFullName = function() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+// // Prototypes
+// Person.prototype.getBirthYearProto = function() {
+//     return this.dob.getFullYear()
+// }
+// Person.prototype.getFullNameProto = function() {
+//     return `${this.firstName} ${this.lastName}`
+// }
+// // Instantiate object
+// const person1 = new Person("Vishnu", "Mano", '5-25-2005');
+// console.log(person1.getBirthYear());
+// console.log(person1.getFullName());
+// console.log(person1);
+// const person2 = new Person('Krishna', 'Mano', '10-15-2008')
+// console.log(person2.getBirthYearProto());
+// // Classes
+// class Person {
+//     constructor(firstName, lastName, dob) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.dob = new Date(dob);
+//     }
+//     getBirthYear() {
+//         return this.dob.getFullYear();
+//     }
+//     getFullName() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
 
+// const person3 = new Person('Mano', 'Unni', '1-1-1976');
+// console.log(person3.getFullName());
+
+// // DOM
+// // console.log(window); // window object is parent object of browser
+// // Single Element Selectors
+// console.log(document.getElementById('my-form'));
+// console.log(document.querySelector('h1')); // primary single element selector
+// // Multiple Element Selectors
+// console.log(document.querySelectorAll('.item')); // primary multiple element selector
+// console.log(document.getElementsByClassName('item'));
+// console.log(document.getElementsByTagName('li'));
+// // Looping through
+// const items = document.querySelectorAll('.item');
+// items.forEach((item) => console.log(item));
+// console.log(document.getElementsByClassName('items'));
+// Manipulating DOM
+const ul = document.querySelector('.items');
+ul.remove();
+
+let names = ['Quentin', 'Sina', 'Quoli', 'Ben', 'Samantha']
+
+names = names.filter(n => n[0] != 'Q').filter(name => name.length > 3);
+
+console.log(names);
