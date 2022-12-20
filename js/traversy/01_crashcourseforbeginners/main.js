@@ -225,12 +225,39 @@
 // const items = document.querySelectorAll('.item');
 // items.forEach((item) => console.log(item));
 // console.log(document.getElementsByClassName('items'));
-// Manipulating DOM
-const ul = document.querySelector('.items');
-ul.remove();
+// // Manipulating DOM
+// const ul = document.querySelector('.items');
+// // ul.remove();
+// // ul.lastElementChild.remove();
+// // ul.firstElementChild.textContent = 'Hello';
+// // ul.children[1].textContent = 'Vishnu';
+// ul.lastElementChild.innerHTML = '<h1>Hello</h1>';
+// const btn = document.querySelector('.btn');
+// btn.style.background = 'red';
+// const btn = document.querySelector('.btn');
+// btn.addEventListener('mouseover', (e) => {
+//     e.preventDefault();
+//     document.querySelector('#my-form').style.background = '#ccc'
+//     document.querySelector('body').classList.add('bg-dark');
+//     document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hello</h1>'
+// });
 
-let names = ['Quentin', 'Sina', 'Quoli', 'Ben', 'Samantha']
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
 
-names = names.filter(n => n[0] != 'Q').filter(name => name.length > 3);
+document.addEventListener('submit', onSubmit);
 
-console.log(names);
+function onSubmit(e) {
+    e.preventDefault();
+    console.log(nameInput.value);
+    if(nameInput.value === '' || emailInput.value === '') {
+        msg.classList.add('error');
+        msg.innerHTML = '<h5>Please enter fields</h5>';
+        setTimeout(() => msg.remove(), 3000);
+    } else {
+        const li = document.createElement();
+    }
+}
