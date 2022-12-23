@@ -242,22 +242,28 @@
 //     document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hello</h1>'
 // });
 
+
 const myForm = document.querySelector('#my-form');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const msg = document.querySelector('.msg');
 const userList = document.querySelector('#users');
 
-document.addEventListener('submit', onSubmit);
+myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e) {
     e.preventDefault();
-    console.log(nameInput.value);
     if(nameInput.value === '' || emailInput.value === '') {
         msg.classList.add('error');
-        msg.innerHTML = '<h5>Please enter fields</h5>';
-        setTimeout(() => msg.remove(), 3000);
+        msg.innerHTML = 'Please complete both fields';
+        setTimeout(() => msg.remove(), 3000)
     } else {
-        const li = document.createElement();
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${nameInput.value} : ${emailInput.value}`)); // li.appendChild adds something to the li
+        userList.appendChild(li);
+        
+        // Clear Fields
+        nameInput.value = '';
+        emailInput.value = '';
     }
 }
